@@ -24,7 +24,7 @@ def define():
         if i not in new:
             new[i] = freq[i]
     for i in new:
-        new[i] = str(round((new[i]/word_count)*100,2))+"%"
+        new[i] = str(new[i])+"("+str(round((new[i]/word_count)*100,2))+"%"+")"
 
     return render_template('base.html',translated_text=f'\n the word count of "{(ip_word)}"  is :  {word_count} \n the sentence count is : {sen_count} \n the key word density is : {new}')
 
